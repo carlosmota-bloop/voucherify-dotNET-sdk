@@ -12,7 +12,7 @@ namespace Voucherify.DataModel.Contexts
         public CodeConfig CodeConfig { get; set; }
 
         [JsonProperty(PropertyName = "type", NullValueHandling = NullValueHandling.Ignore)]
-        public VoucherType Type { get; private set; }
+        public VoucherType? Type { get; private set; }
 
         [JsonProperty(PropertyName = "campaign", NullValueHandling = NullValueHandling.Ignore)]
         public string Campaign { get; set; }
