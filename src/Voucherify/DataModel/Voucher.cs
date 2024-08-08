@@ -31,7 +31,10 @@ namespace Voucherify.DataModel
         
         [JsonProperty(PropertyName = "gift")]
         public Gift Gift { get; private set; }
-
+        
+        [JsonProperty(PropertyName = "loyalty_card")]
+        public LoyaltyCard LoyaltyCard { get; private set; }
+        
         [JsonProperty(PropertyName = "start_date")]
         public DateTime? StartDate { get; private set; }
 
