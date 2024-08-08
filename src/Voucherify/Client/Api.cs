@@ -115,6 +115,21 @@ namespace Voucherify.Client
             }
         }
 
+        private Client.ApiEndpoints.Loyalties loyalties;
+
+        public Client.ApiEndpoints.Loyalties Loyalties
+        {
+            get
+            {
+                if (loyalties == null)
+                {
+                    loyalties = new ApiEndpoints.Loyalties(this);
+                }
+
+                return loyalties;
+            }
+        }
+
         public Api(string appId, string appToken, string origin)
         {
             if (string.IsNullOrEmpty(appToken))
