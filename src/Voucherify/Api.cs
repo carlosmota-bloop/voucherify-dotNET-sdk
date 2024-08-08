@@ -219,6 +219,21 @@ namespace Voucherify
             }
         }
 
+        private ApiEndpoints.Loyalties loyalties;
+
+        public ApiEndpoints.Loyalties Loyalties
+        {
+            get
+            {
+                if (loyalties == null)
+                {
+                    loyalties = new ApiEndpoints.Loyalties(this);
+                }
+
+                return loyalties;
+            }
+        }
+
         public Api(string appId, string appToken) : this (appId, appToken, ApiVersion.Default)
         {
         }
